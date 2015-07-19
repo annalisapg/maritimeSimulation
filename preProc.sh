@@ -1,4 +1,12 @@
 #!/bin/sh
+#
+# Code doing some preprocessing in GRASS for goemonierTest.gaml script in Gamas
+#
+# This program is free software under the GNU General Public
+# License (>=v2). Read the file COPYING that comes with GRASS
+# for details.
+#
+# annalisa.minelli at gmail.com
 
 #example zoom for example dataset:
 #north=6834686
@@ -35,9 +43,9 @@ w=`echo "$(($west-200))"`
 #path to experiment configuration xml file
 #pathToConfig="/home/annalisa/Scaricati/Gama1.6.1_Linux_64bits/Gama/headless/samples/"
 
-#the DEM resolution must be exact and the raster squared-cell otherwise Gama will not read it
+#the DEM must be squared-cell and the resolution exactotherwise Gama will not read it
 grass71 $dataGrassMapset --exec g.region n=$n s=$s e=$e w=$w -a res=100
-grass71 $dataGrassMapset --exec r.mapcalc expression='bathy=bathy_goemTrou100'
+grass71 $dataGrassMapset --exec r.mapcalc expression='bathy='$bathyName
 grass71 $dataGrassMapset --exec r.out.gdal $bathyName output=$gamaHeadlessIncludes'bathy.asc' format=AAIGrid nodata=-9999
 grass71 $dataGrassMapset --exec v.in.region rettangolo
 grass71 $dataGrassMapset --exec v.select ainput=$startingP binput=rettangolo operator=intersects output=partenza
