@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Simulation id="2" sourcePath="./boatTraffic/goemonierTestv2.gaml" finalstep="50" experiment="goemonier">
+  <Parameters>
+    <Parameter name="nbGoem" type="INT" value="0" />
+    <Parameter name="nbCsj" type="INT" value="3" />
+  </Parameters>
+  <Outputs>
+    <Output id="1" name="my_display" framerate="1" />
+  </Outputs>
+</Simulation>
