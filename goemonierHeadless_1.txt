@@ -1,0 +1,10 @@
+/**
+ *  simaris notes
+ *  Author: annalisa
+ *  Description: simulate the movement and fishing of fishing boats
+ */
+
+- fix of nodata value in the table occurrence: print of datetime and cycle number
+- confirm of the total amount of ressources exploitment after 2yrs
+- interesting functioning of memory and no communications between fishermen: they continue going fishing in (empty) cells they have not visited
+
